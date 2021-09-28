@@ -17,14 +17,14 @@ anzahl_pub = len(counter_for_pub['Publisher'].values)
 print(anzahl_pub)
 #number of unique ORCID ids
 counter_for_orcid = df_orcid_ids['ORCID_ID'].value_counts().rename_axis('ID').reset_index(name='Anzahl')
-counter_for_orcid.to_csv(r'C:\Users\talmu\Desktop\Bachelorarbeit Florjan\Python Code\Bachelorarbeit\counterorcidids.csv', sep=',', index=False, header=True)
+counter_for_orcid.to_csv(r'PATHWHEREFILESHALLBESTORED\counterorcidids.csv', sep=',', index=False, header=True)
 anzahl_unique_ids = len(counter_for_orcid['ID'].values)
 
 #number of unique ROR ids
 anzahl_ror_ids = df_ror_ids['ROR-ID'].values
 print(len(anzahl_ror_ids))
 counter_for_ror = df_ror_ids['ROR-ID'].value_counts().rename_axis('ROR-ID').reset_index(name='Anzahl')
-counter_for_ror.to_csv(r'C:\Users\talmu\Desktop\Bachelorarbeit Florjan\Python Code\Bachelorarbeit\counterrorids.csv', sep=',', index=False, header=True)
+counter_for_ror.to_csv(r'PATHWHEREFILESHALLBESTORED\counterrorids.csv', sep=',', index=False, header=True)
 
 #number of correct, uncertain ids and number of authors which have not been found
 anzahl_autoren = len(data_orcid.index)
@@ -58,4 +58,4 @@ counter_leer = counter_komisch + counter_leer
 
 data_ergebnisse = [{'Autoren': anzahl_autoren, 'IDs': counter_ids, 'korrekte IDs': counter_korrekt, 'unschlüssige IDs': counter_titelnichtgefunden, 'leere Profile': counter_leer, 'einzigartige IDs': anzahl_unique_ids, 'Keine ID gefunden': counter_noorcid}]
 df_ergebnisse = pd.DataFrame(data_ergebnisse, index=['Anzahl'])
-df_ergebnisse.to_csv(r'C:\Users\talmu\Desktop\Bachelorarbeit Florjan\Python Code\Bachelorarbeit\ergebniszahlen.csv', sep=',', index=False, header=True)
+df_ergebnisse.to_csv(r'PATHWHEREFILESHALLBESTORED\ergebniszahlen.csv', sep=',', index=False, header=True)
