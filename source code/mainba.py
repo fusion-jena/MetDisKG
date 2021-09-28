@@ -37,7 +37,7 @@ get_auttitle(df2)
 
 df_auttit = pd.DataFrame(list_aut_tit)
 df_auttit.columns = ['Autor','Titel']
-df_auttit.to_csv(r'C:\Users\talmu\Desktop\Bachelorarbeit Florjan\Python Code\Bachelorarbeit\auttitle.csv', index=False, header=True)
+df_auttit.to_csv(r'PATHWHEREFILESHALLBESTORED\auttitle.csv', index=False, header=True)
 
 
 #check the inputdatabase in ORCID
@@ -172,33 +172,33 @@ def confirm_orcid(counter, orcididliste, titelarray, nachnamenlist, vornamenlist
 confirm_orcid(counter_title1, orcid_ids_1, titel_array1, teil1nachnamen, teil1vornamen)
 erg_extaut1 = pd.DataFrame(ergebnis_liste)
 erg_extaut1.columns = ['Nachname', 'Vorname', 'ORCID_ID', 'Titel','Ergebnis']
-erg_extaut1.to_csv(r'C:\Users\talmu\Desktop\Bachelorarbeit Florjan\Python Code\Bachelorarbeit\ergebnisorcid1.csv', index=False, header=True)
+erg_extaut1.to_csv(r'PATHWHEREFILESHALLBESTORED\ergebnisorcid1.csv', index=False, header=True)
 time.sleep(60)
 
 #check the second part of the data
 confirm_orcid(counter_title2, orcid_ids_2, titel_array2, teil2nachnamen, teil2vornamen)
 erg_extaut2 = pd.DataFrame(ergebnis_liste)
 erg_extaut2.columns = ['Nachname', 'Vorname', 'ORCID_ID', 'Titel','Ergebnis']
-erg_extaut2.to_csv(r'C:\Users\talmu\Desktop\Bachelorarbeit Florjan\Python Code\Bachelorarbeit\ergebnisorcid2.csv', index=False, header=True)
+erg_extaut2.to_csv(r'PATHWHEREFILESHALLBESTORED\ergebnisorcid2.csv', index=False, header=True)
 time.sleep(60)
 
 #check the thrid part of the data
 confirm_orcid(counter_title3, orcid_ids_3, titel_array3, teil3nachnamen, teil3vornamen)
 erg_extaut3 = pd.DataFrame(ergebnis_liste)
 erg_extaut3.columns = ['Nachname', 'Vorname', 'ORCID_ID', 'Titel','Ergebnis']
-erg_extaut3.to_csv(r'C:\Users\talmu\Desktop\Bachelorarbeit Florjan\Python Code\Bachelorarbeit\ergebnisorcid3.csv', index=False, header=True)
+erg_extaut3.to_csv(r'PATHWHEREFILESHALLBESTORED\ergebnisorcid3.csv', index=False, header=True)
 #time.sleep(60)
 
 #check the fourth part of the data (did not work probably timeouterror)
 #confirm_orcid(counter_title4, orcid_ids_4, titel_array4, teil4nachnamen, teil4vornamen)
 #erg_extaut4 = pd.DataFrame(ergebnis_liste)
 #erg_extaut4.columns = ['Nachname', 'Vorname', 'ORCID_ID', 'Titel','Ergebnis']
-#erg_extaut4.to_csv(r'C:\Users\talmu\Desktop\Bachelorarbeit Florjan\Python Code\Bachelorarbeit\ergebnisorcid4.csv', index=False, header=True)
+#erg_extaut4.to_csv(r'PATHWHEREFILESHALLBESTORED\ergebnisorcid4.csv', index=False, header=True)
 
 #generate a csv file with the results
 erg_extaut = pd.DataFrame(ergebnis_liste)
 erg_extaut.columns = ['Nachname', 'Vorname', 'ORCID_ID', 'Titel','Ergebnis']
-erg_extaut.to_csv(r'C:\Users\talmu\Desktop\Bachelorarbeit Florjan\Python Code\Bachelorarbeit\ergebnisorcid.csv', index=False, header=True)
+erg_extaut.to_csv(r'PATHWHEREFILESHALLBESTORED\ergebnisorcid.csv', index=False, header=True)
 
 #disambiguate authors via their features
 
@@ -265,4 +265,4 @@ for k in range(len(gef_inst)):
 #generate a csv file for the results
 df_inst_erg = pd.DataFrame(gefunden)   
 df_inst_erg.columns = ['Institut','ROR-ID']
-df_inst_erg.to_csv(r'C:\Users\talmu\Desktop\Bachelorarbeit Florjan\Python Code\Bachelorarbeit\rorerg.csv', index=False, header=True)
+df_inst_erg.to_csv(r'PATHWHEREFILESHALLBESTORED\rorerg.csv', index=False, header=True)
