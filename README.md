@@ -39,7 +39,7 @@ The framework will automatically disambiguate the given metadata. For every inte
 
 - The result of the disambiguation of institution names is saved in a csv file ```rorerg.csv```
 
-## TODO
+## IMPROVEMENTS
 - [ ] Test the disambiguation of metadata based on the given features 
 
 ## Licensing
